@@ -395,12 +395,17 @@
      background-color: transparent;
      /* border: none; */
      font-size: 17px;
+       margin-top: 15px;
+     margin-bottom: 15px;
      font-weight: 400;
      color: var(--text);
      padding: 15px;
      display: block;
      margin: auto;
      cursor: pointer;
+ }
+hr{
+    margin: 15px;
  }
 .see-more:hover {
     color: white;
@@ -750,7 +755,9 @@
          width: 100%;
          aspect-ratio: 1 / 1;
      }
-
+  .flower-card-info {
+             bottom: 10px;
+         }
      footer {
          padding: 30px 20px;
      }
