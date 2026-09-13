@@ -1,0 +1,686 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ body {
+     font-family: "Montserrat", sans-serif;
+     background: var(--background);
+     color: var(--text);
+     transition: background-color 0.9s ease, color 0.9s ease;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+ }
+
+ ::selection {
+     background-color: #7E9C7B;
+     color: white;
+ }
+
+ h1,
+ h2,
+ h3 {
+     font-family: "Playfair Display", serif;
+ }
+
+ :root {
+     --button: oklch(38.18% 0.097 136.52deg);
+     --background: #FAF8F5;
+     --white: #FFFFFF;
+     --green: #7E9C7B;
+     --text: #2E2E2E;
+     --border: #E8E4DE;
+     --footer: #C9D3C5;
+ }
+
+ body.dark {
+     --background: #1f2420d2;
+     --white: #292E2A;
+     --green: #9CAF88;
+     --text: #F1F0EA;
+     --border: #3B433C;
+     --footer: #303830;
+     --button: #A7B89A;
+ }
+
+ body.dark .navbar {
+     background: #292E2A;
+ }
+
+ body.dark .hero-buttons button:hover {
+     background: var(--button);
+ }
+
+ body.dark p,
+ span,
+ h1,
+ h2,
+ h3,
+ h4,
+ label {
+     color: #292E2A;
+ }
+
+ .Your-inf,
+ .checkout-content,
+ .title,
+ .Bouquet {
+     opacity: 0;
+     transform: translateY(40px);
+     transition: 0.9s ease;
+ }
+
+ .Your-inf.show,
+ .checkout-content.show,
+ .title.show,
+ .Bouquet.show {
+     opacity: 1;
+     transform: translateY(0);
+ }
+
+ .navbar {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 12vh;
+     padding: 0 70px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background: rgba(255, 255, 255, 0.85);
+     border-bottom: 1px solid transparent;
+     z-index: 1000;
+     transition: 0.35s ease;
+     animation: nav-animation 0.8s ease;
+ }
+
+ .menu-toggle {
+     display: none;
+     border: none;
+     background: transparent;
+     color: var(--green);
+     font-size: 28px;
+     cursor: pointer;
+     position: relative;
+ }
+
+ .navbar.scrolled {
+     background: var(--background);
+     border-bottom: 1px solid var(--border);
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+ }
+
+ .logo {
+     align-items: center;
+     cursor: pointer;
+     transition: 0.3s;
+ }
+
+ .logo:hover {
+     transform: translateY(-2px);
+ }
+
+ .logo h1 {
+     font-size: 38px;
+     letter-spacing: 3px;
+     font-weight: 700;
+     color: var(--text);
+ }
+
+ .logo i {
+     color: var(--green);
+     margin-right: 8px;
+     font-size: 28px;
+     animation: float-icon 2s ease-in-out infinite;
+ }
+
+ .nav-links {
+     display: flex;
+     list-style: none;
+     gap: 40px;
+ }
+
+ .nav-links li {
+     position: relative;
+ }
+
+ .nav-links a {
+     position: relative;
+     text-decoration: none;
+     color: var(--text);
+     font-size: 18px;
+     font-weight: 400;
+     padding-bottom: 8px;
+     transition: 0.3s;
+ }
+
+ .nav-links a:hover {
+     color: var(--green);
+ }
+
+ .nav-links a::after {
+     content: "";
+     position: absolute;
+     left: 50%;
+     bottom: 0;
+     width: 0;
+     height: 2px;
+     background: var(--green);
+     transform: translateX(-50%);
+     transition: 0.35s;
+     border-radius: 10px;
+ }
+
+ .nav-links a:hover::after {
+     width: 100%;
+ }
+
+ .nav-links a.active {
+     color: var(--green);
+ }
+
+ .nav-links a.active::after {
+     width: 100%;
+ }
+
+ .dark-mode-btn {
+     padding: 40px;
+     border: none;
+     background: transparent;
+     color: var(--text);
+     font-size: 20px;
+     cursor: pointer;
+     transition: 0.3s ease;
+ }
+
+ .dark-mode-btn:hover {
+     color: var(--green);
+     transform: rotate(-15deg);
+ }
+
+ main {
+     flex: 1;
+ }
+
+ .title {
+     text-align: center;
+     padding: 90px 0 30px;
+ }
+
+ .title h2 {
+     font-size: 35px;
+     font-weight: 500;
+     margin-bottom: 5px;
+     color: var(--text);
+ }
+
+ .title span {
+     font-size: 20px;
+     color: var(--text);
+ }
+
+ .checkout-content {
+     width: 90%;
+     margin: auto;
+     display: flex;
+     gap: 30px;
+     justify-content: center;
+     padding: 0px 0 40px;
+ }
+
+
+ .Your-inf {
+     width: 45%;
+     background-color: #FFFFFF;
+     border: 1px solid #E8E4DE;
+     border-radius: 8px;
+     padding: 30px;
+ }
+
+ .Your-inf h3 {
+     font-family: "Cormorant Garamond", serif;
+     font-size: 28px;
+     font-weight: 600;
+     margin-bottom: 25px;
+ }
+
+ .input-group {
+     margin-bottom: 18px;
+ }
+
+ .input-group label {
+     display: block;
+     font-size: 13px;
+     font-weight: 500;
+     margin-bottom: 7px;
+ }
+
+ .input-group input,
+ .input-group textarea {
+     width: 100%;
+     padding: 12px;
+     border: 1px solid #E8E4DE;
+     border-radius: 5px;
+     background-color: #FFFFFF;
+     font-size: 13px;
+     outline: none;
+     transition: 0.3s ease;
+ }
+
+ .div {
+     margin-top: 10px;
+     width: 100%;
+     padding: 12px;
+     border: 1px solid #E8E4DE;
+     border-radius: 5px;
+     background-color: #FFFFFF;
+     font-size: 13px;
+     outline: none;
+     transition: 0.3s ease;
+     text-align: center;
+ }
+
+ .Your-inf button {
+     width: 100%;
+     padding: 12px;
+     border: 1px solid #E8E4DE;
+     transition: 0.3s ease;
+     font-size: 13px;
+ }
+
+ .Your-inf button {
+     background-color: var(--green);
+     color: white;
+ }
+
+ .Your-inf button:hover {
+     background-color: rgb(82, 126, 95);
+     color: white;
+ }
+
+ .input-group input:focus,
+ .input-group textarea:focus {
+     border-color: #7E9C7B;
+ }
+
+ footer {
+     width: 100%;
+     padding: 10px 60px;
+     background-color: #2E3A2C;
+     box-sizing: border-box;
+ }
+
+ .footer-links {
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     color: white;
+ }
+
+ .footer-brand,
+ .footer-column,
+ .footer-social {
+     padding: 5px;
+ }
+
+ .footer-brand h3,
+ .footer-column h3,
+ .footer-social h3 {
+     margin-bottom: 10px;
+     font-family: "Montserrat", sans-serif;
+     font-size: 18px;
+     font-weight: 500;
+     color: #D8CBB8;
+ }
+
+ .footer-brand p {
+     color: white;
+     font-size: 14px;
+ }
+
+ .footer-column ul {
+     margin: 0;
+     padding: 0;
+ }
+
+ .footer-column li {
+     list-style: none;
+     padding: 5px 0;
+ }
+
+ .footer-column a {
+     text-decoration: none;
+     color: white;
+     font-size: 14px;
+     transition: 0.3s ease;
+ }
+
+ .footer-column a:hover {
+     color: #D8CBB8;
+     padding-left: 5px;
+ }
+
+ .footer-social h3 {
+     margin-bottom: 15px;
+ }
+
+ .footer-social a {
+     text-decoration: none;
+ }
+
+ .footer-social i {
+     margin-right: 8px;
+     font-size: 28px;
+     color: white;
+     transition: 0.3s ease;
+ }
+
+ .footer-social a:hover i {
+     color: #D8CBB8;
+     transform: translateY(-4px);
+ }
+
+ @media (max-width: 1200px) {
+     main {
+         width: 100%;
+     }
+
+     .navbar {
+         padding: 0 25px;
+     }
+
+     .menu-toggle {
+         display: block;
+         order: 3;
+     }
+
+     #darkModeBtn {
+         order: 2;
+         margin-left: auto;
+         margin-right: 20px;
+         padding: 10px;
+     }
+
+     .nav-links {
+         display: none;
+         position: absolute;
+         top: 100%;
+         left: 0;
+         width: 100%;
+         padding: 25px 0;
+         flex-direction: column;
+         align-items: center;
+         gap: 20px;
+         background: var(--background);
+         border-bottom: 1px solid var(--border);
+         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+     }
+
+     .nav-links.active {
+         display: flex;
+     }
+
+     .title {
+         padding-top: 130px;
+         padding-bottom: 25px;
+         margin-top: 0;
+     }
+
+     .checkout-content {
+         width: 90%;
+         gap: 20px;
+     }
+
+     .Bouquet,
+     .Your-inf {
+         width: 50%;
+     }
+
+     .Bouquet {
+         padding: 20px;
+     }
+
+     .Your-inf {
+         padding: 25px;
+     }
+
+     .Bouquet .img {
+         height: 280px;
+     }
+
+     footer {
+         padding: 15px 30px;
+     }
+
+     .footer-links {
+         padding: 0;
+         gap: 30px;
+     }
+
+     .footer-brand,
+     .footer-column,
+     .footer-social {
+         padding: 5px;
+     }
+
+     .footer-brand h3 {
+         font-size: 23px;
+     }
+
+     .footer-column h3,
+     .footer-social h3 {
+         font-size: 17px;
+     }
+
+     .footer-brand p,
+     .footer-column a {
+         font-size: 13px;
+     }
+
+     .footer-column li {
+         padding: 4px 0;
+     }
+
+     .footer-social i {
+         font-size: 27px;
+     }
+ }
+
+ @media (max-width: 768px) {
+     .navbar {
+         height: 80px;
+         min-height: 80px;
+         padding: 0 20px;
+     }
+
+     .logo h1 {
+         font-size: 30px;
+     }
+
+     .logo i {
+         font-size: 22px;
+     }
+
+     #darkModeBtn {
+         margin-right: 10px;
+         padding: 10px;
+         font-size: 18px;
+     }
+
+     .menu-toggle {
+         font-size: 25px;
+     }
+
+     .title {
+         padding: 30px 20px;
+         margin-top: 2rem;
+     }
+
+     .title h2 {
+         font-size: 32px;
+     }
+
+     .title span {
+         font-size: 17px;
+     }
+
+     .checkout-content {
+         width: 90%;
+         flex-direction: column;
+         gap: 20px;
+         padding: 10px 0 35px;
+     }
+
+     .Bouquet,
+     .Your-inf {
+         width: 100%;
+     }
+
+     .Bouquet {
+         padding: 20px;
+     }
+
+     .Your-inf {
+         padding: 25px;
+     }
+
+     .Bouquet .img {
+         height: 300px;
+     }
+
+     .pr-inf h4 {
+         font-size: 26px;
+     }
+
+     .Your-inf h3 {
+         font-size: 27px;
+         margin-bottom: 20px;
+     }
+
+     footer {
+         padding: 25px 20px;
+     }
+
+     .footer-links {
+         flex-direction: column;
+         gap: 20px;
+     }
+
+     .footer-brand,
+     .footer-column,
+     .footer-social {
+         width: 100%;
+         padding: 5px 0;
+     }
+
+     .footer-brand h3 {
+         font-size: 20px;
+     }
+
+     .footer-brand p,
+     .footer-column a {
+         font-size: 13px;
+     }
+
+     .footer-column h3,
+     .footer-social h3 {
+         font-size: 16px;
+     }
+
+     .footer-column li {
+         padding: 5px 0;
+     }
+
+     .footer-social i {
+         font-size: 26px;
+     }
+ }
+
+ @media (max-width: 480px) {
+     .logo h1 {
+         font-size: 26px;
+         letter-spacing: 2px;
+     }
+
+     .logo i {
+         font-size: 19px;
+         margin-right: 5px;
+     }
+
+     #darkModeBtn {
+         margin-right: 5px;
+         font-size: 17px;
+     }
+
+     .title {
+         padding: 69px 15px 20px;
+     }
+
+     .title h2 {
+         font-size: 30px;
+     }
+
+     .title span {
+         font-size: 15px;
+     }
+
+     .checkout-content {
+         width: 92%;
+         gap: 15px;
+         padding-bottom: 30px;
+     }
+
+     .Bouquet {
+         padding: 15px;
+     }
+
+     .Your-inf {
+         padding: 20px 15px;
+     }
+
+     .Bouquet .img {
+         height: 250px;
+     }
+
+     .pr-inf h4 {
+         font-size: 24px;
+     }
+
+     .pr-inf p {
+         font-size: 13px;
+     }
+
+     .Your-inf h3 {
+         font-size: 25px;
+     }
+
+     .input-group label {
+         font-size: 12px;
+     }
+
+     .input-group input,
+     .input-group textarea {
+         padding: 11px;
+         font-size: 12px;
+     }
+
+     .Your-inf button {
+         padding: 11px;
+         font-size: 12px;
+     }
+
+     .footer-links {
+         gap: 15px;
+     }
+
+     .footer-social i {
+         font-size: 25px;
+     }
+ }

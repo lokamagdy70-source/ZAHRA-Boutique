@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crafty+Girls&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>
+                    <i class="fa-solid fa-spa"></i>
+                    ZAHRA
+                </h1>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li class="dropdown">
+                    <a href="../Flower/index.html">Flowers</a>
+                </li>
+                <li class="dropdown">
+                    <a href="../Collections/index.html">Collections</a>
+                </li>
+                <li>
+                    <a href="../about/index.html">About</a>
+                </li>
+                <li>
+                    <a href="../contact/index.html">Contact</a>
+                </li>
+                <li>
+                    <a href="../Login&SignUp/index.html">Login</a>
+                </li>
+            </ul>
+
+            <button id="darkModeBtn" class="dark-mode-btn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="title">
+            <h2>Checkout / Order</h2>
+            <span>Complete Your Order</span>
+        </div>
+
+        <div class="checkout-content">
+            <section class="Your-inf">
+                <h3>Your Information</h3>
+
+                <form id="checkoutForm">
+                    <div class="input-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="address">Address</label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                    </div>
+
+                    <button type="submit" class="place-order" id="OrderBtn">
+                        Place Order
+                    </button>
+
+                    <div class="div" id="PlaceOrder"></div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <div class="footer-brand">
+                <h3>ZAHRA</h3>
+                <p>Bloom with Elegance</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="../Home-page/index.html">Home</a></li>
+                    <li><a href="../Flower/index.html">Flowers</a></li>
+                    <li><a href="../Collections/index.html">Collections</a></li>
+                    <li><a href="../about/index.html">About Us</a></li>
+                    <li><a href="../contact/index.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h3>FOLLOW US</h3>
+
+                <a href="">
+                    <i class="fa-brands fa-square-instagram"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-square-pinterest"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-square-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

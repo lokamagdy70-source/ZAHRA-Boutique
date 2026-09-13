@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flowers</title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crafty+Girls&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <nav class="navbar">
+            <div class="logo">
+                <h1>
+                    <i class="fa-solid fa-spa"></i>
+                    ZAHRA
+                </h1>
+            </div>
+            <button class="menu-toggle" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="../index.html" >Home</a>
+                </li>
+                <li class="dropdown">
+                    <a href="../Flower/index.html" class="active">Flowers</a>
+                </li>
+                <li class="dropdown">
+                    <a href="../Collections/index.html">Collections</a>
+                </li>
+                <li>
+                    <a href="../about/index.html">About</a>
+                </li>
+                <li>
+                    <a href="../contact/index.html">Contact</a>
+                </li>
+                <li>
+                    <a href="../Login&SignUp/index.html">Login</a>
+                </li>
+
+            </ul>
+
+            <button id="darkModeBtn" class="dark-mode-btn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section class="title">
+        <h2>Flowers</h2>
+        <p>
+            Send flower arrangements for all occasions
+        </p>
+    </section>
+
+    <section class="collections-page">
+
+
+        <div class="collections-filters">
+            <div class="collection-filter">
+                <h3>By Colour</h3>
+                <label>
+                    <input type="radio" name="flower" value="Pink">
+                    Pink
+                </label>
+                <label>
+                    <input type="radio" name="flower" value="White">
+                    White
+                </label>
+                <label>
+                    <input type="radio" name="flower" value="Purple">
+                    Purple
+                </label>
+                <label>
+                    <input type="radio" name="flower" value="Yellow">
+                    Yellow
+                </label>
+                <label>
+                    <input type="radio" name="flower" value="Red">
+                    Red
+                </label>
+                <label>
+                    <input type="radio" name="flower" value="Orange">
+                    Orange
+                </label>
+            </div>
+
+            <hr>
+
+            <div class="price-filter">
+
+                <h3>Price</h3>
+                <label>
+                    <input type="radio" name="price" value="35">
+                    £35
+                </label>
+
+                <label>
+                    <input type="radio" name="price" value="50">
+                    £50
+                </label>
+                <label>
+                    <input type="radio" name="price" value="75">
+                    £75
+                </label>
+                <label>
+                    <input type="radio" name="price" value="100">
+                    £100
+                </label>
+            </div>
+        </div>
+
+        <div class="collections-products">
+            <div class="flower-cards">
+        
+                <div class="flower-card" data-price="35" data-flower="pink" data-id="bonbon-dahlia" onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/e/s/esli-dahlia-royal-windsor.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=768&width=768" alt="Memory Lane Rose">
+                    <div class="flower-card-info">
+                        <p>Bonbon Dahlia</p>
+                        <span>From £35.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card" data-price="75" data-flower="pink" data-id="Daybreak Anthurium"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/a/n/anthurium_pink_stem.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=768&width=768" alt="Pink Sweet Avalanche Rose">
+                    <div class="flower-card-info">
+                        <p>Daybreak Anthurium</p>
+                        <span>From £75.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card" data-price="35" data-flower="White" data-id="Cornfield Foxtail Lily"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/f/o/foxtail_lily_cornfield_foxtail_lily_vase_2.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=768&width=768" alt="50 Roses Red">
+                    <div class="flower-card-info">
+                        <p>Cornfield Foxtail Lily</p>
+                        <span>From £35.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card" data-price="75" data-flower="White" data-id="Chiffon Lisianthus"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/wysiwyg/peony_primrose_peony_vase_copy.jpg" alt="Yellow Penny Lane Rose">
+                    <div class="flower-card-info">
+                        <p>Chiffon Lisianthus</p>
+                        <span>From £75.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card" data-price="100" data-flower="Purple" data-id="Dusty Lilac Delphinium"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/l/i/lilac-delphiniums-white-mayfair_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=768&width=768" alt="Orange Naranga Rose">
+                    <div class="flower-card-info">
+                        <p>Dusty Lilac Delphinium</p>
+                        <span>From £100.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card" data-price="50" data-flower="Purple" data-id="Memory Lane Rose"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/r/o/rose_memory_lane_rose_vase3.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=768&width=768" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Memory Lane Rose</p>
+                        <span>From £55.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card" data-price="50" data-flower="Yellow" data-id="Yellow Penny Lane Rose"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/r/o/rose_yellow_penny_lane_rose_vase_2.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=768&width=768" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Yellow Penny Lane Rose</p>
+                        <span>From £50.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card" data-price="50" data-flower="Yellow" data-id="the Beach Dahlia"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/d/a/dahlia_sex_on_the_beach_dahlia_vase_2.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=768&width=768" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>the Beach Dahlia</p>
+                        <span>From £45.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card" data-price="75" data-flower="red" data-id="The Soul Mate" onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/b/a/bacarat-flute-vase.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=768&width=768" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>The Soul Mate</p>
+                        <span>From £70.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card extra-card" data-price="100" data-flower="Yellow" data-id="Sunflower"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/s/u/sunflower_apothecary_sunflower_vase_set1_5.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=367&width=334&canvas=334:367" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Sunflower</p>
+                        <span>From £85.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card extra-card" data-price="75" data-flower="pink" data-id="Patch"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/b/l/blushing-reeva-flute-vase.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=367&width=334&canvas=334:367" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Patch</p>
+                        <span>From £70.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card extra-card" data-price="35" data-flower="pink" data-id="Sorbonne Pink"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/d/e/deluxe_lily_sorbonne_pink_long_stem_deluxe_lily_vase_2.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=768&width=768" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Sorbonne Pink</p>
+                        <span>From £35.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card extra-card" data-price="75" data-flower="Orange" data-id="Bird of Paradise"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/b/i/birds_of_paradise_large_onyx_mayfair.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=768&width=768" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Bird of Paradise</p>
+                        <span>From £75.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card extra-card" data-price="35" data-flower="Orange" data-id="Blush Nude Stock"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/s/t/stock_blush_nude_stock_vase1_3.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=768&width=768" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Blush Nude Stock</p>
+                        <span>From £35.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card extra-card" data-price="35" data-flower="White" data-id="Ivory"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/r/o/rose_ivory_avalanche_rose_vase_6.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=768&width=768" alt="Pink Sweet Avalanche Rose">
+                    <div class="flower-card-info">
+                        <p>Ivory</p>
+                        <span>From £35.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card extra-card" data-price="50" data-flower="red" data-id="Red Daybreak Anthurium"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/a/n/anthurium_red_vase.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=845&width=768&canvas=768:845" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Daybreak Anthurium</p>
+                        <span>From £50.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card extra-card" data-price="100" data-flower="White" data-id="Astrantia"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/a/s/astrantia_first_kiss_astrantia_vase_2.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=768&width=768" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Astrantia</p>
+                        <span>From £100.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card extra-card" data-price="70" data-flower="White" data-id="Sky High Orchid"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/o/r/orchid_plant_electric_white_phalaenopsis_orchid_plant_4stems_white_2.jpeg?optimize=medium&bg-color=255,255,255&fit=bounds&height=768&width=768"
+                        alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Sky High Orchid</p>
+                        <span>From £70.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card extra-card" data-price="50" data-flower="pink" data-id="Pink Cheeks Campanula"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/p/i/pink-campanula-med-apoth-01-pdp.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=768&width=768" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Pink Cheeks Campanula</p>
+                        <span>From £50.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card extra-card" data-price="100" data-flower="pink" data-id="Pink Cheeks Campanulaa"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/a/s/astilbe_pink_flutter_astilbe_stem_2.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=845&width=768&canvas=768:845" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Pink Cheeks Campanula</p>
+                        <span>From £100.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card extra-card" data-price="75" data-flower="Purple" data-id="Violet Campanula"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/c/a/campanula_dark-purple.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=768&width=768" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Violet Campanula</p>
+                        <span>From £75.00</span>
+                    </div>
+                </div>
+        
+                <div class="flower-card extra-card" data-price="100" data-flower="White" data-id="Modern White Calla Lily"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/m/o/modern_white_cala_lilly_white_mayfair.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=768&width=768" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Modern White Calla Lily</p>
+                        <span>From £100.00</span>
+                    </div>
+                </div>
+        
+            </div>
+        
+            <button class="see-more" id="seeMoreBtn">
+                See More
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+        </div>
+
+
+
+    </section>
+
+    <section class="season">
+        <div class="season-flower">
+           <img src="https://www.flowerbx.com/media/wysiwyg/prestige-sping-sub-gif.gif" alt="">
+           <h3>SPRING</h3>
+        </div>
+
+        <div class="season-flower" >
+            <img src="https://www.flowerbx.com/media/wysiwyg/prestige-summer-subs-gif.gif" alt="">
+            <h3>SUMMER</h3>
+        </div>
+
+        <div class="season-flower">
+            <img src="https://www.flowerbx.com/media/wysiwyg/signature-autumn-subs-gif.gif" alt="">
+            <h3>AUTUMN</h3>
+        </div>
+
+        <div class="season-flower ">
+            <img src="https://www.flowerbx.com/media/wysiwyg/signature-winter-subs-gif.gif" alt="">
+            <h3>WINTER</h3>
+        </div>
+    </section>
+
+    <footer>
+    
+        <div class="footer-links">
+     
+            <div class="footer-brand">
+                <h3>ZAHRA</h3>
+                <p>Bloom with Elegance</p>
+            </div>
+    
+            <div class="footer-column">
+                <h3>QUICK LINKS</h3>
+    
+                <ul>
+                    <li><a href="../Home-page/index.html">Home</a></li>
+                    <li><a href="../Flower/index.html">Flowers</a></li>
+                    <li><a href="../Collections/index.html">Collections</a></li>
+                    <li><a href="../about/index.html">About Us</a></li>
+                    <li><a href="../contact/index.html">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-social">
+                <h3>FOLLOW US</h3>
+                <a href="">
+                    <i class="fa-brands fa-square-instagram"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-square-pinterest"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-square-facebook"></i>
+                </a>
+    
+            </div>
+    
+        </div>
+    
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

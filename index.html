@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ZAHRA | Flower Shop</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crafty+Girls&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="Home-page/style.css">
+</head>
+
+<body>
+
+    <!-- header nav -->
+    <header>
+        <nav class="navbar">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <h1><i class="fa-solid fa-spa"></i>ZAHRA</h1>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html" class="active">Home</a>
+                </li>
+
+                <li>
+                    <a href="Flower/index.html">Flowers</a>
+                </li>
+
+                <li>
+                    <a href="Collections/index.html">Collections</a>
+                </li>
+
+                <li>
+                    <a href="about/index.html">About</a>
+                </li>
+
+                <li>
+                    <a href="contact/index.html">Contact</a>
+                </li>
+
+                <li>
+                    <a href="Login&SignUp/index.html">Login</a>
+                </li>
+            </ul>
+
+            <button id="darkModeBtn" class="dark-mode-btn" aria-label="Toggle Dark Mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+
+    <!-- section 1 big image -->
+    <section class="hero">
+        <video autoplay muted loop playsinline>
+            <source src="https://www.pexels.com/download/video/6764456/" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <h2 class="section-title">Fabulous, fresh, seasonal flowers delivered to your door</h2>
+            <p>
+                Order flowers for yourself or surprise someone else with a single box or subscription
+            </p>
+            <div class="hero-buttons">
+                <a href="book/index.html"><button>DISCOVER</button></a>
+                <a href="Login&SignUp/index.html"><button>LOGIN</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 2 how it work -->
+    <section class="how-it-works">
+        <h2>How it works..</h2>
+        <div class="how-it-works-item">
+            <img src="Home-page/image/Delivery-rafiki.png" alt="Flowers delivered to your door" loading="lazy">
+            <div class="how-it-works-content">
+                <span>Flowers delivered to your door</span>
+                <p>
+                    Guaranteed to be your favourite delivery of the week
+                </p>
+            </div>
+        </div>
+        <div class="how-it-works-item">
+            <img src="Home-page/image/Florist-pana.png" alt="Arrange flowers like a professional" loading="lazy">
+            <div class="how-it-works-content">
+                <span>Arrange like a pro</span>
+                <p>
+                    Unleash your inner florist using our beautiful flower-arranging guide
+                </p>
+            </div>
+        </div>
+        <div class="how-it-works-item">
+            <img src="Home-page/image/Blooming-bro.png" alt="Fresh flowers that last for weeks" loading="lazy">
+            <div class="how-it-works-content">
+                <span>They'll last for weeks!</span>
+                <p>
+                    Guaranteed freshness – transforming from bud to bloom in your home
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- section 3 flower -->
+    <section class="flowers-section">
+        <h2>FLOWERS</h2>
+
+        <div class="flowers-slider">
+            <button class="slider-arrow arrow-left" aria-label="Previous flower">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="flower-cards">
+                <div class="flower-card" data-price="35" data-flower="pink" data-id="bonbon-dahlia"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/e/s/esli-dahlia-royal-windsor.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=845&width=768&canvas=768:845" alt="Bonbon Dahlia" loading="lazy">
+                    <div class="flower-card-info">
+                        <p>Bonbon Dahlia</p>
+                        <span>From £35.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card" data-price="35" data-flower="White" data-id="Cornfield Foxtail Lily"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/f/o/foxtail_lily_cornfield_foxtail_lily_vase_2.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=367&width=334&canvas=334:367" alt="Cornfield Foxtail Lily"
+                        loading="lazy">
+                    <div class="flower-card-info">
+                        <p>Cornfield Foxtail Lily</p>
+                        <span>From £35.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card" data-price="75" data-flower="White" data-id="Chiffon Lisianthus"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/p/i/pink_lisi_medium_royal_windsor.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=367&width=334&canvas=334:367" alt="Chiffon Lisianthus" loading="lazy">
+                    <div class="flower-card-info">
+                        <p>Chiffon Lisianthus</p>
+                        <span>From £75.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card" data-price="50" data-flower="Yellow" data-id="Yellow Penny Lane Rose"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/r/o/rose_yellow_penny_lane_rose_vase_2.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=768&width=768" alt="Yellow Penny Lane Rose"
+                        loading="lazy">
+                    <div class="flower-card-info">
+                        <p>Yellow Penny Lane Rose</p>
+                        <span>From £50.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card" data-price="45" data-flower="Yellow" data-id="the Beach Dahlia"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/d/a/dahlia_sex_on_the_beach_dahlia_vase_2.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=845&width=768&canvas=768:845" alt="the Beach Dahlia" loading="lazy">
+                    <div class="flower-card-info">
+                        <p>the Beach Dahlia</p>
+                        <span>From £45.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card extra-card" data-price="70" data-flower="pink" data-id="Patch"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/w/h/white_delphs.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=845&width=768&canvas=768:845" alt="Patch"
+                        loading="lazy">
+                    <div class="flower-card-info">
+                        <p>Patch</p>
+                        <span>From £70.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card extra-card" data-price="85" data-flower="Yellow" data-id="Sunflower"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/catalog/product/s/u/sunflower_apothecary_sunflower_vase_set1_5.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=845&width=768&canvas=768:845" alt="Sunflower" loading="lazy">
+                    <div class="flower-card-info">
+                        <p>Sunflower</p>
+                        <span>From £85.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card extra-card" data-price="35" data-flower="White" data-id="Ivory"
+                    onclick="openProduct(this)">
+                    <img src="https://www.flowerbx.com/media/wysiwyg/peony_primrose_peony_vase_copy.jpg" alt="Ivory" loading="lazy">
+                    <div class="flower-card-info">
+                        <p>Ivory</p>
+                        <span>From £35.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="slider-arrow arrow-right" aria-label="Next flower">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- section 4 collections -->
+    <!-- <section class="collections-section">
+        <div class="collections-container">
+            <h2>COLLECTIONS</h2>
+            <div class="collection-cards">
+                <div class="collection-card">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wedding" loading="lazy">
+                    <div class="collection-info">
+                        <span>
+                            <i class="fa-solid fa-ring"></i>
+                            WEDDING
+                        </span>
+                        <p>View Collection
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <img src="https://images.pexels.com/photos/20278829/pexels-photo-20278829.jpeg" alt="Birthday" loading="lazy">
+                    <div class="collection-info">
+                        <span>
+                            <i class="fa-solid fa-cake-candles"></i>
+                            BIRTHDAY
+                        </span>
+                        <p>
+                            View Collection
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <img src="https://images.pexels.com/photos/9123564/pexels-photo-9123564.jpeg" alt="Valentine" loading="lazy">
+                    <div class="collection-info">
+                        <span>
+                            <i class="fa-solid fa-heart"></i>
+                            Valentine's Day
+                        </span>
+                        <p>
+                            View Collection
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <img src="https://images.pexels.com/photos/30539211/pexels-photo-30539211.jpeg" alt="Congratulations" loading="lazy">
+                    <div class="collection-info">
+                        <span>
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            CONGRATULATIONS
+                        </span>
+                        <p>View Collection
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <img src="https://images.pexels.com/photos/15791190/pexels-photo-15791190.jpeg" alt="Thank You" loading="lazy">
+                    <div class="collection-info">
+                        <span>
+                            <i class="fa-solid fa-gift"></i>
+                            THANK YOU
+                        </span>
+                        <p>View Collection
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="collections-section">
+        <h2>COLLECTIONS</h2>
+    
+        <div class="collections-slider">
+    
+            <button class="collection-arrow collection-arrow-left" aria-label="Previous collection">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+    
+            <div class="collection-cards">
+    
+                <div class="collection-card">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=870&auto=format&fit=crop"
+                        alt="Wedding" loading="lazy">
+    
+                    <div class="collection-info">
+                        <span>
+                            <i class="fa-solid fa-ring"></i>
+                            WEDDING
+                        </span>
+    
+                        <p>
+                            View Collection
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </p>
+                    </div>
+                </div>
+    
+    
+                <div class="collection-card">
+                    <img src="https://images.pexels.com/photos/20278829/pexels-photo-20278829.jpeg" alt="Birthday"
+                        loading="lazy">
+    
+                    <div class="collection-info">
+                        <span>
+                            <i class="fa-solid fa-cake-candles"></i>
+                            BIRTHDAY
+                        </span>
+    
+                        <p>
+                            View Collection
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </p>
+                    </div>
+                </div>
+    
+    
+                <div class="collection-card">
+                    <img src="https://images.pexels.com/photos/9123564/pexels-photo-9123564.jpeg" alt="Valentine"
+                        loading="lazy">
+    
+                    <div class="collection-info">
+                        <span>
+                            <i class="fa-solid fa-heart"></i>
+                            Valentine's Day
+                        </span>
+    
+                        <p>
+                            View Collection
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </p>
+                    </div>
+                </div>
+    
+    
+                <div class="collection-card">
+                    <img src="https://images.pexels.com/photos/30539211/pexels-photo-30539211.jpeg" alt="Congratulations"
+                        loading="lazy">
+    
+                    <div class="collection-info">
+                        <span>
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            CONGRATULATIONS
+                        </span>
+    
+                        <p>
+                            View Collection
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </p>
+                    </div>
+                </div>
+    
+    
+                <div class="collection-card">
+                    <img src="https://images.pexels.com/photos/15791190/pexels-photo-15791190.jpeg" alt="Thank You"
+                        loading="lazy">
+    
+                    <div class="collection-info">
+                        <span>
+                            <i class="fa-solid fa-gift"></i>
+                            THANK YOU
+                        </span>
+    
+                        <p>
+                            View Collection
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </p>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <button class="collection-arrow collection-arrow-right" aria-label="Next collection">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+    
+        </div>
+    </section>
+
+    <!-- section 5 -->
+    <section class="why-zahra">
+        <div class="why-zahra-content">
+            <div class="why-zahra-text">
+                <h2>Here's why you’ll love us</h2>
+
+                <div class="benefit">
+                    <img src="https://cdn-icons-png.flaticon.com/512/896/896442.png" alt="Clock" loading="lazy">
+                    <div class="benefit-info">
+                        <span>Super long-lasting flowers</span>
+                        <p>
+                            Your flowers are delivered in bud and bloom for up to 2 weeks
+                        </p>
+                    </div>
+                </div>
+
+                <div class="benefit">
+                    <img src="https://cdn-icons-png.flaticon.com/512/9206/9206340.png" alt="Flower arrangement" loading="lazy">
+                    <div class="benefit-info">
+                        <span>You'll learn to arrange</span>
+                        <p>
+                            We deliver flowers with a bespoke guide with flowerful tips and tricks
+                        </p>
+                    </div>
+                </div>
+
+                <div class="benefit">
+                    <img src="https://cdn-icons-png.flaticon.com/512/6312/6312467.png" alt="Sustainable flower" loading="lazy">
+                    <div class="benefit-info">
+                        <span>Sustainable flowers</span>
+                        <p>
+                            We grow to order to keep waste to a minimum
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="why-zahra-image">
+                <img src="https://embedsocial.com/admin/cdncache/feed-media/18104/18104340802794065/image_0_large.webp" alt="Zahra Flowers" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <div class="footer-brand">
+                <h3>ZAHRA</h3>
+                <p>Bloom with Elegance</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../Flower/index.html">Flowers</a></li>
+                    <li><a href="../Collections/index.html">Collections</a></li>
+                    <li><a href="../about/index.html">About Us</a></li>
+                    <li><a href="../contact/index.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h3>FOLLOW US</h3>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#" aria-label="Pinterest"><i class="fa-brands fa-square-pinterest"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Home-page/script.js"></script>
+</body>
+
+</html>

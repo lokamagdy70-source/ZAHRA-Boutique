@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crafty+Girls&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- nav -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>
+                    <i class="fa-solid fa-spa"></i>
+                    ZAHRA
+                </h1>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li class="dropdown">
+                    <a href="../Flower/index.html">Flowers</a>
+                </li>
+                <li class="dropdown">
+                    <a href="../Collections/index.html" class="active">Collections</a>
+                </li>
+                <li>
+                    <a href="../about/index.html">About</a>
+                </li>
+                <li>
+                    <a href="../contact/index.html">Contact</a>
+                </li>
+                <li>
+                    <a href="../Login&SignUp/index.html">Login</a>
+                </li>
+            </ul>
+
+            <button id="darkModeBtn" class="dark-mode-btn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+<!-- title -->
+    <section class="title">
+        <h2>Collections</h2>
+        <p>Send flower arrangements for all occasions</p>
+    </section>
+
+    <section class="collections-page">
+        <div class="collections-filters">
+            <div class="collection-filter">
+                <h3>Collections</h3>
+                <label>
+                    <input type="radio" name="collection" value="wedding">
+                    Wedding
+                </label>
+                <label>
+                    <input type="radio" name="collection" value="birthday">
+                    Birthday
+                </label>
+                <label>
+                    <input type="radio" name="collection" value="valentine">
+                    Valentine's Day
+                </label>
+                <label>
+                    <input type="radio" name="collection" value="thank-you">
+                    Thank You
+                </label>
+                <label>
+                    <input type="radio" name="collection" value="congratulations">
+                    Congratulations
+                </label>
+            </div>
+
+            <hr>
+
+            <div class="price-filter">
+                <h3>Price</h3>
+                <label>
+                    <input type="radio" name="price" value="35">
+                    £35
+                </label>
+                <label>
+                    <input type="radio" name="price" value="50">
+                    £50
+                </label>
+                <label>
+                    <input type="radio" name="price" value="75">
+                    £75
+                </label>
+                <label>
+                    <input type="radio" name="price" value="100">
+                    £100
+                </label>
+            </div>
+        </div>
+
+        <div class="collections-products">
+            <div class="flower-cards">
+                <div class="flower-card" data-price="35" data-id="Cotton Candy" data-collection="wedding"
+                    onclick="openProduct(this)">
+                    <img src="https://www.freddiesflowers.com/_next/image?url=https%3A%2F%2Ffreddiesflowers-com.s3.eu-west-2.amazonaws.com%2Fimages%2Fgift-products%2F35-38%2FUNBOXING%2F35-38-3-LB-PRODUCT-V2-1X1-WEB.jpg&w=640&q=75" alt="Memory Lane Rose">
+                    <div class="flower-card-info">
+                        <p>Cotton Candy</p>
+                        <span>From £35.00</span>
+                    </div>
+                </div>
+                <div class="flower-card" data-price="75" data-collection="birthday" data-id="Sensibility"
+                    onclick="openProduct(this)">
+                    <img src="https://www.freddiesflowers.com/_next/image?url=https%3A%2F%2Ffreddiesflowers-com.s3.eu-west-2.amazonaws.com%2Fimages%2Fgift-products%2F35-38%2FUNBOXING%2F35-38-2-CL-PRODUCT-V2-WEB.jpg&w=640&q=75" alt="Pink Sweet Avalanche Rose">
+                    <div class="flower-card-info">
+                        <p>Sensibility</p>
+                        <span>From £75.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card" data-price="35" data-id="Parma Violet" data-collection="congratulations"
+                    onclick="openProduct(this)">
+                    <img src="https://www.freddiesflowers.com/_next/image?url=https%3A%2F%2Ffreddiesflowers-com.s3.eu-west-2.amazonaws.com%2Fimages%2Fgift-products%2FWK35-38%2FCHOICE%2F35-38-CHOICE1-CUT-DOWN-WEB.jpg&w=640&q=75" alt="50 Roses Red">
+                    <div class="flower-card-info">
+                        <p>Parma Violet</p>
+                        <span>From £35.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card" data-price="75" data-id="Dahlia Disco" data-collection="valentine"
+                    onclick="openProduct(this)">
+                    <img src="https://www.freddiesflowers.com/_next/image?url=https%3A%2F%2Ffreddiesflowers-com.s3.eu-west-2.amazonaws.com%2Fimages%2Fgift-products%2F35-38%2FUNBOXING%2F35-38-2-SS-PRODUCT-V2-WEB.jpg&w=640&q=75" alt="Yellow Penny Lane Rose">
+                    <div class="flower-card-info">
+                        <p>Dahlia Disco</p>
+                        <span>From £75.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card" data-price="100" data-id="Sense" data-collection="thank-you"
+                    onclick="openProduct(this)">
+                    <img src="https://www.freddiesflowers.com/_next/image?url=https%3A%2F%2Ffreddiesflowers-com.s3.eu-west-2.amazonaws.com%2Fimages%2Fgift-products%2F35-38%2FBUNDLES%2F35-38-3-CL-VASE.jpg&w=640&q=75" alt="Orange Naranga Rose">
+                    <div class="flower-card-info">
+                        <p>Sense</p>
+                        <span>From £100.00</span>
+                    </div>
+                </div>
+                <div class="flower-card" data-price="50" data-id="All the Hydrangeas" data-collection="wedding"
+                    onclick="openProduct(this)">
+                    <img src="https://www.freddiesflowers.com/_next/image?url=https%3A%2F%2Ffreddiesflowers-com.s3.eu-west-2.amazonaws.com%2Fimages%2Fgift-products%2F35-38%2FBUNDLES%2F35-38-1-CL-VASE.jpg&w=640&q=75" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>All the Hydrangeas</p>
+                        <span>From £55.00</span>
+                    </div>
+                </div>
+
+                
+                <div class="flower-card" data-price="50" data-id="Rose A La Mode" data-collection="birthday"
+                    onclick="openProduct(this)">
+                    <img src="https://www.freddiesflowers.com/_next/image?url=https%3A%2F%2Ffreddiesflowers-com.s3.eu-west-2.amazonaws.com%2Fimages%2Fgift-products%2F35-38%2FUNBOXING%2FNEW%2F35-38-1-SS-PRODUCT-V2-1X1-WEB.jpg&w=640&q=75" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Rose A La Mode</p>
+                        <span>From £50.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card" data-price="50" data-id="Neon Sky" data-collection="congratulations"
+                    onclick="openProduct(this)">
+                    <img src="https://www.freddiesflowers.com/_next/image?url=https%3A%2F%2Ffreddiesflowers-com.s3.eu-west-2.amazonaws.com%2Fimages%2Fgift-products%2F35-38%2FUNBOXING%2F35-38-3-SS-PRODUCT-1X1-V2-WEB.jpg&w=640&q=75" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Neon Sky</p>
+                        <span>From £45.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card extra-card" data-price="75" data-id="Parma Violet & Classic Vase"
+                    data-collection="valentine" onclick="openProduct(this)">
+                    <img src="https://www.freddiesflowers.com/_next/image?url=https%3A%2F%2Ffreddiesflowers-com.s3.eu-west-2.amazonaws.com%2Fimages%2Fgift-products%2F35-38%2FBUNDLES%2F35-38-2-CL-LARGE-CANDLE-BUNDLE.jpg&w=640&q=75" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Parma Violet & Classic Vase</p>
+                        <span>From £70.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card extra-card" data-price="100" data-id="Tangerine Dream"
+                    data-collection="thank-you" onclick="openProduct(this)">
+                    <img src="https://www.freddiesflowers.com/_next/image?url=https%3A%2F%2Ffreddiesflowers-com.s3.eu-west-2.amazonaws.com%2Fimages%2Fgift-products%2FWK35-38%2FPRODUCT%2F35-38-4-SS-PRODUCT-WEB.jpg&w=640&q=75" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Tangerine Dream</p>
+                        <span>From £85.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card extra-card" data-price="75" data-id="Cabbage Patch" data-collection="wedding"
+                    onclick="openProduct(this)">
+                    <img src="https://www.freddiesflowers.com/_next/image?url=https%3A%2F%2Ffreddiesflowers-com.s3.eu-west-2.amazonaws.com%2Fimages%2Fgift-products%2F35-38%2FCHOICE%2F35-38-CHOICE3-DAHLIA-SS-PRODUCT-1X1-WEB.jpg&w=640&q=75" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Cabbage Patch</p>
+                        <span>From £70.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card extra-card" data-price="35" data-id="Autumn Embers" data-collection="birthday"
+                    onclick="openProduct(this)">
+                    <img src="https://www.freddiesflowers.com/_next/image?url=https%3A%2F%2Ffreddiesflowers-com.s3.eu-west-2.amazonaws.com%2Fimages%2Fgift-products%2F35-38%2FBUNDLES%2F35-38-2-SS-LARGE-CANDLE-BUNDLE.jpg&w=640&q=75" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Autumn Embers</p>
+                        <span>From £35.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card extra-card" data-price="75" data-id="Autumn's Bounty2"
+                    data-collection="congratulations" onclick="openProduct(this)">
+                    <img src="https://www.freddiesflowers.com/_next/image?url=https%3A%2F%2Ffreddiesflowers-com.s3.eu-west-2.amazonaws.com%2Fimages%2Fgift-products%2F35-38%2FBUNDLES%2F35-38-1-SS-LARGE-CANDLE-BUNDLE.jpg&w=640&q=75" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Autumn's Bounty</p>
+                        <span>From £75.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card extra-card" data-price="35" data-id="Candle" data-collection="valentine"
+                    onclick="openProduct(this)">
+                    <img src="https://www.freddiesflowers.com/_next/image?url=https%3A%2F%2Ffreddiesflowers-com.s3.eu-west-2.amazonaws.com%2Fimages%2Fgift-products%2F39-42%2FPRODUCT%2F39-42-1-SS-PRODUCT-WEB.jpg&w=640&q=75" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Candle</p>
+                        <span>From £35.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card extra-card" data-price="35" data-id="Tangerine Dream2"
+                    data-collection="thank-you" onclick="openProduct(this)">
+                    <img src="https://www.freddiesflowers.com/_next/image?url=https%3A%2F%2Ffreddiesflowers-com.s3.eu-west-2.amazonaws.com%2Fimages%2Fgift-products%2F39-42%2FPRODUCT%2F39-42-3-SS-PRODUCT-1X1-WEB.jpg&w=640&q=75" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Tangerine Dream</p>
+                        <span>From £35.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card extra-card" data-price="50" data-id="Patch2" data-collection="wedding"
+                    onclick="openProduct(this)">
+                    <img src="https://www.freddiesflowers.com/_next/image?url=https%3A%2F%2Ffreddiesflowers-com.s3.eu-west-2.amazonaws.com%2Fimages%2Fgift-products%2F39-42%2FPRODUCT%2F39-42-4-SS-PRODUCT-1X1-WEB.jpg&w=640&q=75" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Patch</p>
+                        <span>From £50.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card extra-card" data-price="100" data-id="wedding" data-collection="wedding"
+                    onclick="openProduct(this)">
+                    <img src="https://www.freddiesflowers.com/_next/image?url=https%3A%2F%2Ffreddiesflowers-com.s3.eu-west-2.amazonaws.com%2Fimages%2Fgift-products%2F39-42%2FPRODUCT%2F39-42-2-SS-PRODUCT-WEB.jpg&w=640&q=75" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>wedding</p>
+                        <span>From £100.00</span>
+                    </div>
+                </div>
+
+                <div class="flower-card extra-card" data-price="70" data-id="Ciara con" data-collection="birthday"
+                    onclick="openProduct(this)">
+                    <img src="https://www.freddiesflowers.com/_next/image?url=https%3A%2F%2Ffreddiesflowers-com.s3.eu-west-2.amazonaws.com%2Fimages%2Fgift-products%2F39-42%2FCHOICE%2F39-42-SS-CHOICE1-PRODUCT-1X1-WEB.jpg&w=640&q=75" alt="Rose A La Mode">
+                    <div class="flower-card-info">
+                        <p>Ciara con</p>
+                        <span>From £70.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="see-more" id="seeMoreBtn">
+                See More
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <div class="footer-brand">
+                <h3>ZAHRA</h3>
+                <p>Bloom with Elegance</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>QUICK LINKS</h3>
+
+                <ul>
+                    <li><a href="../Home-page/index.html">Home</a></li>
+                    <li><a href="../Flower/index.html">Flowers</a></li>
+                    <li><a href="../Collections/index.html">Collections</a></li>
+                    <li><a href="../about/index.html">About Us</a></li>
+                    <li><a href="../contact/index.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h3>FOLLOW US</h3>
+
+                <a href="">
+                    <i class="fa-brands fa-square-instagram"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-square-pinterest"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-square-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

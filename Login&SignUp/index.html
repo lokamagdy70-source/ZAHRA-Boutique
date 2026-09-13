@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn & SignUp</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crafty+Girls&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>
+                    <i class="fa-solid fa-spa"></i>
+                    ZAHRA
+                </h1>
+            </div>
+
+            <button class="menu-toggle" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li class="dropdown">
+                    <a href="../Flower/index.html">Flowers</a>
+                </li>
+                <li class="dropdown">
+                    <a href="../Collections/index.html">Collections</a>
+                </li>
+                <li>
+                    <a href="../about/index.html">About</a>
+                </li>
+                <li>
+                    <a href="../contact/index.html">Contact</a>
+                </li>
+                <li>
+                    <a href="../Login&SignUp/index.html" class="active">Login</a>
+                </li>
+            </ul>
+
+            <button id="darkModeBtn" class="dark-mode-btn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section class="auth-section">
+        <div class="auth-media">
+            <div class="img">
+                <img src="https://images.pexels.com/photos/35461534/pexels-photo-35461534.jpeg"
+                    alt="Hand-tied bouquet of David Austin garden roses">
+            </div>
+            <div class="auth-caption">
+                <p class="auth-quote">"Every bouquet begins with a single, unhurried choice."</p>
+                <p class="auth-signature">— The Zahra Atelier</p>
+            </div>
+        </div>
+
+        <div class="auth-panel">
+            <div class="login-container">
+                <div class="auth-heading">
+                    <h2>Welcome back</h2>
+                    <p class="auth-subtext">Sign in to pick up your order and saved arrangements.</p>
+                </div>
+
+                <div class="auth-fields">
+                    <div class="input-field">
+                        <i class="fa-regular fa-envelope field-icon"></i>
+                        <input type="email" name="" id="lemail" placeholder="Email">
+                    </div>
+
+                    <div class="input-field password-box">
+                        <i class="fa-solid fa-lock field-icon"></i>
+                        <input type="password" id="lpsw" placeholder="Password">
+                        <i class="fa-solid fa-eye toggle-eye" id="eyePsw"></i>
+                    </div>
+                </div>
+
+                <button id="lbtn">Login</button>
+
+                <div class="alert-box" id="loginAlertBox">
+                    <p id="loginAlertMessage"></p>
+                </div>
+
+                <span class="auth-switch">New here? <a href="#" id="Signlink">Create an account</a></span>
+            </div>
+
+            <div class="signup-container">
+                <div class="auth-heading">
+                    <h2>Create your account</h2>
+                    <p class="auth-subtext">Join Zahra for early access to seasonal collections.</p>
+                </div>
+
+                <div class="auth-fields">
+                    <div class="input-row">
+                        <div class="input-field">
+                            <i class="fa-regular fa-user field-icon"></i>
+                            <input type="text" name="" id="FirstName" placeholder="First name">
+                        </div>
+
+                        <div class="input-field">
+                            <i class="fa-regular fa-user field-icon"></i>
+                            <input type="text" name="" id="LastName" placeholder="Last name">
+                        </div>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-regular fa-envelope field-icon"></i>
+                        <input type="email" name="" id="sEmail" placeholder="Email">
+                    </div>
+
+                    <div class="input-field password-box">
+                        <i class="fa-solid fa-lock field-icon"></i>
+                        <input type="password" id="spsw" placeholder="Password">
+                        <i class="fa-solid fa-eye toggle-eye" id="showSignPassword"></i>
+                    </div>
+
+                    <div class="input-field password-box">
+                        <i class="fa-solid fa-lock field-icon"></i>
+                        <input type="password" id="sConfirmPassword" placeholder="Confirm password">
+                        <i class="fa-solid fa-eye toggle-eye" id="eyeConfirm"></i>
+                    </div>
+                </div>
+
+                <button id="signupBtn">Sign Up</button>
+
+                <div class="alert-box" id="signupAlertBox">
+                    <p id="signupAlertMessage"></p>
+                </div>
+
+                <span class="auth-switch">Already a member? <a href="#" id="loginlink">Log in</a></span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <div class="footer-brand">
+                <h3>ZAHRA</h3>
+                <p>Bloom with Elegance</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="../Home-page/index.html">Home</a></li>
+                    <li><a href="../Flower/index.html">Flowers</a></li>
+                    <li><a href="../Collections/index.html">Collections</a></li>
+                    <li><a href="../about/index.html">About Us</a></li>
+                    <li><a href="../contact/index.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h3>FOLLOW US</h3>
+
+                <a href="">
+                    <i class="fa-brands fa-square-instagram"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-square-pinterest"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-square-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
