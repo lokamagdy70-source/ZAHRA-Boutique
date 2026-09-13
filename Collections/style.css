@@ -304,6 +304,7 @@
      display: flex;
      flex-wrap: wrap;
      gap: 20px;
+       margin-bottom: 10px;
  }
 /* flower card */
  .flower-card {
@@ -361,10 +362,10 @@
      /* padding: 20px; */
      background-color: transparent;
      /* border: none; */
-     font-size: 17px;
+     font-size: 16px;
      font-weight: 400;
      color: var(--text);
-     padding: 15px;
+     padding: 10px;
      display: block;
      margin: auto;
      cursor: pointer;
@@ -375,6 +376,7 @@
      padding: 10px 60px;
      background-color: #2E3A2C;
      box-sizing: border-box;
+      margin-top: 10px;
  }
 
  .footer-links {
@@ -708,6 +710,9 @@
      .collections-page {
          padding: 0 20px;
      }
+       .flower-card-info{
+            bottom: 10px;
+         }
 
      .flower-card {
          aspect-ratio: 1 / 1;
